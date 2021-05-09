@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React from "react"
 import './App.css';
+import Favourite from "./Components/Favourite"
+import Search from "./Components/search"
+import {ContactProvider} from "./Components/context"
+
 
 function App() {
+
+ 
   return (
+    <ContactProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2 className="main-heading">Contact Filtering List</h2>
+      
+        <Search />
+        <Favourite/>
+       
+    
     </div>
+    </ContactProvider>
   );
 }
 
